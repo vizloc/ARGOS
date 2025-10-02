@@ -24,12 +24,20 @@
             font-family: 'Inter', sans-serif;
         }
         /* Style for the section headings */
-        .section-title {
-            @apply text-3xl font-bold text-center text-gray-800 mb-10;
-        }
+     .section-title {
+    text-align: center;
+    font-weight: 800; /* equivalent to font-extrabold */
+    font-size: 2.25rem; /* text-4xl */
+    margin-bottom: 3rem; /* mb-12 */
+    color: #111827; /* text-gray-900 */
+     }
+
+       
+
         /* Style for content sections */
         .content-section {
             @apply my-16;
+            margin-bottom: 3rem; /* mb-12 */
         }
     </style>
 </head>
@@ -45,21 +53,16 @@
             
             <!-- EDIT: Your Authors -->
             <p class="text-xl text-gray-600 mb-4">
-                <a href="#" class="text-blue-600 hover:underline">Ayon</a><sup>1</sup>,
-                <a href="#" class="text-blue-600 hover:underline">Arko</a><sup>1</sup>,
-                <a href="#" class="text-blue-600 hover:underline">Tharan</a><sup>1</sup>,
-                <a href="#" class="text-blue-600 hover:underline">Aravind</a><sup>1</sup>
+                <a href="#" class="text-blue-600 hover:underline">Anonynmous Authors</a>
+           
             </p>
             
-            <!-- EDIT: Your Affiliations -->
-            <p class="text-lg text-gray-500">
-                IIT Madras
-            </p>
             
             <!-- EDIT: Conference/Journal Information -->
-            <p class="text-2xl font-semibold text-gray-800 mt-6">
-                PERCOM 2026
-            </p>
+           <p class="text-2xl font-medium italic text-gray-600 mt-6">
+            Under review at PerCom 2026
+           </p>
+
         </header>
 
         <!-- Links Section -->
@@ -78,13 +81,12 @@
 
         <!-- Teaser Image Section -->
         <section class="mb-16">
-            <!-- EDIT: Replace with your teaser image -->
-            <img src="https://pub.mdpi-res.com/sensors/sensors-25-03626/article_deploy/html/images/sensors-25-03626-g001.png?1749538232" 
-                 alt="Teaser image for the paper" 
-                 class="w-full rounded-xl shadow-lg border-4 border-white">
-            <p class="text-center text-gray-500 mt-4 text-sm">
-                Methodology
-            </p>
+        <h2 class="section-title"> Methodology </h2>
+        <iframe src="assets/argos_schematic.jpg"
+                width="100%"
+                height="300px"
+                class="rounded-xl shadow-lg border-4 border-white">
+        </iframe>
         </section>
 
         <!-- Abstract Section -->
@@ -98,37 +100,29 @@
 
         <!-- Video Section -->
         <section class="content-section">
-            <h2 class="section-title">Video Presentation</h2>
-            <div class="aspect-w-16 aspect-h-9 max-w-4xl mx-auto">
-                <!-- EDIT: Embed your YouTube/Vimeo video -->
-                <iframe 
-                    class="w-full h-full rounded-xl shadow-lg border-4 border-white"
-                    src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
-                    title="YouTube video player" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
-                </iframe>
-            </div>
+            <h2 class="section-title">Video Demonstration </h2>
+             <div class="columns is-centered has-text-centered">
+            <video autoplay="autoplay" muted="muted" loop="" style="max-width: 100%; height: auto;" onmouseover="this.controls=true" onmouseout="this.controls=false">
+              <source src="assets/ARGOS_V1.mp4"> type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+        </div>
         </section>
 
-        <!-- Methodology Section -->
-        <section class="content-section">
-            <h2 class="section-title">Method</h2>
-            <!-- EDIT: Describe your method -->
-            <div class="max-w-4xl mx-auto space-y-8">
-                <p class="text-lg leading-relaxed">
-                    This is where you explain the technical details of your work. You can break it down into multiple paragraphs. Describe the core ideas, the architecture, and the novel contributions that make your method stand out.
-                </p>
-                <!-- EDIT: Add a diagram of your method -->
-                <img src="https://placehold.co/1000x500/e2e8f0/334155?text=Method+Diagram" 
-                     alt="Diagram of the proposed method" 
-                     class="w-full rounded-xl shadow-lg border-4 border-white">
-                <p class="text-lg leading-relaxed">
-                    Continue with more details. You can add more images, figures, and text blocks as needed to fully illustrate your approach. Use clear and concise language to make it accessible to a broad audience.
-                </p>
-            </div>
-        </section>
+     <!-- Methodology Section -->
+<section class="content-section">
+    <h2 class="section-title">Method</h2>
+    <div class="max-w-4xl mx-auto space-y-8">
+        <p class="text-lg leading-relaxed">
+            This is where you explain the technical details of your work. You can break it down into multiple paragraphs.
+        </p>
+
+        <p class="text-lg leading-relaxed">
+            Continue with more details. You can add more images, figures, and text blocks as needed.
+        </p>
+    </div>
+</section>
+
         
         <!-- Results Section -->
         <section class="content-section">
@@ -164,7 +158,7 @@
             <!-- EDIT: Your BibTeX citation -->
             <div class="max-w-3xl mx-auto bg-gray-100 p-6 rounded-lg shadow-inner border text-sm">
                 <pre class="whitespace-pre-wrap break-all font-mono"><code>@inproceedings{author2026title,
-    author    = {Ayon,Arko,Tharan,Aravind},
+    author    = {},
     title     = {Argos},
     booktitle = {Percom},
     year      = {2026},
@@ -174,7 +168,6 @@
 
         <!-- Footer -->
         <footer class="mt-16 pt-8 border-t text-center text-gray-500 text-sm">
-            <p>&copy; 2026 SENSE Lab - IIT Madras. All Rights Reserved.</p>
             <p class="mt-2">Website template design inspired by nerfies.github.io and mvsgaussian.github.io.</p>
         </footer>
 
@@ -182,5 +175,4 @@
 
 </body>
 </html>
-
 

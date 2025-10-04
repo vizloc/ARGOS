@@ -33,6 +33,12 @@
       overflow-y: scroll;
       width: 100%;
     }
+
+    /* Fallback helper in case some environments don’t recognize Tailwind’s text-justify */
+    .justify-text {
+      text-align: justify; /* Equivalent to Tailwind `text-justify` */
+      text-justify: inter-word; /* Modern CSS control for justification method */
+    }
   </style>
 </head>
 <body class="bg-gray-50 text-gray-700">
@@ -101,29 +107,9 @@
     <!-- Summary Section -->
     <section class="content-section my-10">
       <h2 class="section-title">Abstract</h2>
-      <p class="text-base sm:text-lg leading-relaxed max-w-4xl mx-auto bg-white p-5 sm:p-8 rounded-xl shadow border">
-      Performance of wireless navigation systems degrade
-sharply in industrial environments dominated by metallic clutter
-and heavy multipath. The primary cause lies in how anchors are
-placed or selected. Methods that succeed in open spaces fail under
-severe non-line-of-sight (nLoS) and frequent layout changes, for
-instance, induced by moving forklifts or shifting shelves. We
-introduce Argos, a multimodal wireless digital twin that fuses
-visual and RF information to optimize anchor selection. Visual
-imagery reconstructs the 3D layout, updated continuously via
-existing surveillance cameras, while RF measurements capture
-material-specific attenuation and reflections. We show that layout
-priors alone are insufficient; combining them with the required
-RF optics yields a material-aware channel model that predicts
-range errors under severe nLoS. Argos adapts proactively to
-environmental changes, without the requirement of repeated
-RF calibration or retraining, sustaining sub-meter localization
-accuracy in dynamic scenes. We validate Argos in a 120 m2
-factory testbed spanning over 700 locations, where the digital
-twin is built from 5K RGB images and 0.4M UWB CIR samples.
-To our knowledge, this is the first system to exploit visual priors
-for adaptive orchestration of wireless navigation infrastructure.
-      </p>
+      <p class="text-base sm:text-lg leading-relaxed max-w-4xl mx-auto bg-white p-5 sm:p-8 rounded-xl shadow border text-justify justify-text">
+  Performance of wireless navigation systems degrade sharply in industrial environments dominated by metallic clutter and heavy multipath. The primary cause lies in how anchors are placed or selected. Methods that succeed in open spaces fail under severe non-line-of-sight (nLoS) and frequent layout changes, for instance, induced by moving forklifts or shifting shelves. <span class="font-semibold text-gray-900">We introduce Argos</span>, a multimodal wireless digital twin that fuses visual and RF information to optimize anchor selection. Visual imagery reconstructs the 3D layout, updated continuously via existing surveillance cameras, while RF measurements capture material-specific attenuation and reflections. We show that layout priors alone are insufficient; <span class="font-semibold text-gray-900">combining them with RF optics</span> yields a <span class="font-semibold text-gray-900">material-aware channel model</span> that predicts range errors under severe nLoS. <span class="font-semibold text-gray-900">Argos adapts proactively</span> to environmental changes, without the requirement of repeated RF calibration or retraining, sustaining <span class="font-semibold text-gray-900">sub-meter localization accuracy</span> in dynamic scenes. We validate Argos in a <span class="font-semibold text-gray-900">120 m² factory testbed</span> spanning over 700 locations, where the digital twin is built from <span class="font-semibold text-gray-900">5K RGB images</span> and <span class="font-semibold text-gray-900">0.4M UWB CIR samples</span>. To our knowledge, this is the <span class="font-semibold text-gray-900">first system to exploit visual priors for adaptive orchestration of wireless navigation infrastructure</span>.
+</p>
     </section>
 
     <!-- Video Demonstration Section -->
@@ -149,40 +135,45 @@ for adaptive orchestration of wireless navigation infrastructure.
           <img src="assets/PSNR.jpeg"
                alt="Result 1"
                class="w-full rounded-lg mb-4"/>
-          <p class="text-center text-sm text-gray-600"> Impact of 3D reconstruction fidelity. Top, Left: Median localization
-error decreases with finer voxelization as PSNR improves, but accuracy gains
-saturate beyond 40 cm voxels (≈14 dB). Across all resolutions, Argos outperforms ArgosLO. Top, Right: Segmentation accuracy across methods. Bottom:
-Example reconstructions with 10, 20, 40 and 100 cm voxel resolutions.</p>
+          <p class="text-sm text-gray-700 bg-gray-50 p-3 rounded-lg leading-relaxed text-justify">
+  <span class="font-semibold text-gray-900">Impact:</span> 3D reconstruction fidelity shapes localization performance. <br> 
+  <span class="font-semibold text-gray-900">Top, Left:</span> Median localization error decreases with finer voxelization as PSNR improves, but accuracy gains saturate beyond 40 cm voxels (≈14 dB).   <br> 
+  <span class="font-semibold text-gray-900">Across resolutions:</span> Argos outperforms ArgosLO.   <br> 
+  <span class="font-semibold text-gray-900">Top, Right:</span> Segmentation accuracy across methods.   <br> 
+  <span class="font-semibold text-gray-900">Bottom:</span> Example reconstructions at 10, 20, 40, and 100 cm voxel resolutions.
+</p>
         </div>
         <div class="bg-white p-4 sm:p-5 rounded-xl shadow-md border flex flex-col">
           <img src="assets/Channel_Prediction.jpeg"
                alt="Result 2"
                class="w-full rounded-lg mb-4"/>
-          <p class="text-center text-sm text-gray-600">Top-left: Effect of RSS threshold with 5 anchors. At −74 dBm,
-coverage drops to ≈40% uncovered while median ∆FMD improves to 7 taps,
-giving a practical balance. Top-right: Effect of anchor count at −90 dBm.
-Largest gains occur from 4 to 5 anchors; beyond 5, coverage gains and ∆FMD
-reduction are marginal while ToA-TWR overhead grows. Bottom: ∆FMD
-heatmaps for representative anchor placements.
+      <p class="text-center text-sm text-gray-600 text-justify justify-text leading-relaxed">
+  <span class="font-semibold text-gray-900">Top-left:</span> Effect of RSS threshold with 5 anchors.<br>
+  <span class="font-semibold text-gray-900">At −74 dBm:</span> Coverage drops to ≈40% uncovered while median ∆FMD improves to 7 taps, giving a practical balance.<br>
+  <span class="font-semibold text-gray-900">Top-right:</span> Effect of anchor count at −90 dBm.<br>
+  <span class="font-semibold text-gray-900">Observation:</span> Largest gains occur from 4 to 5 anchors; beyond 5, coverage gains and ∆FMD reduction are marginal while ToA-TWR overhead grows.<br>
+  <span class="font-semibold text-gray-900">Bottom:</span> ∆FMD heatmaps for representative anchor placements.
 </p>
         </div>
         <div class="bg-white p-4 sm:p-5 rounded-xl shadow-md border flex flex-col">
           <img src="assets/Voxel_Update.jpeg"
                alt="Result 3"
                class="w-full rounded-lg mb-4"/>
-    
-          <p class="text-center text-sm text-gray-600">: Effect of layout dynamics on recomputation latency. Left: Original
-voxel map. Middle: Changed map with displaced robotic arms (green) – 6%
-voxel change. Right: ∆FMD cache recomputation latency grows with voxel
-churn: ≈2 s for 2% updates and ≈7 s for 10%.</p>
+ 
+<p class="text-center text-sm text-gray-600 text-justify justify-text leading-relaxed">
+  <span class="font-semibold text-gray-900">Overview:</span> Effect of layout dynamics on recomputation latency.<br>
+  <span class="font-semibold text-gray-900">Left:</span> Original voxel map.<br>
+  <span class="font-semibold text-gray-900">Middle:</span> Changed map with displaced robotic arms (green) – 6% voxel change.<br>
+  <span class="font-semibold text-gray-900">Right:</span> ∆FMD cache recomputation latency grows with voxel churn: ≈2 s for 2% updates and ≈7 s for 10%.
+</p> 
         </div>
         <div class="bg-white p-4 sm:p-5 rounded-xl shadow-md border flex flex-col">
           <img src="assets/cdf_optimization.jpg"
                alt="Result 4"
                class="w-full rounded-lg mb-4"/>
-   
-          <p class="text-center text-sm text-gray-600"> Under a 5-anchor budget, Argos yields a median localization
-error of 0.6 m, compared to 1.8 m (ArgosLO) and 2.97 m (GDoP).</p>
+<p class="text-center text-sm text-gray-600 text-justify justify-text leading-relaxed">
+  <span class="font-semibold text-gray-900">Result:</span> Under a 5-anchor budget, Argos yields a median localization error of 0.6 m, compared to 1.8 m (ArgosLO) and 2.97 m (GDoP).
+</p>
         </div>
       </div>
     </section>

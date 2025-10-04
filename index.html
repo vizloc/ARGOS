@@ -64,7 +64,7 @@
     <!-- Schematic Section -->
     <section class="content-section flex flex-col items-center my-10">
       <img
-        src="assets/Argos.jpg"
+        src="assets/argos_schematic.jpg"
         alt="ARGOS Schematic"
         class="w-full max-w-2xl h-auto rounded-xl shadow-lg border-4 border-white drop-shadow mb-2 cursor-zoom-in focus-ring"
         id="argosThumb"
@@ -103,9 +103,29 @@
 
     <!-- Summary Section -->
     <section class="content-section my-10">
-      <h2 class="section-title">Summary</h2>
+      <h2 class="section-title">Abstract</h2>
       <p class="text-base sm:text-lg leading-relaxed max-w-4xl mx-auto bg-white p-5 sm:p-8 rounded-xl shadow border">
-        This is a placeholder for your paper's abstract. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      Performance of wireless navigation systems degrade
+sharply in industrial environments dominated by metallic clutter
+and heavy multipath. The primary cause lies in how anchors are
+placed or selected. Methods that succeed in open spaces fail under
+severe non-line-of-sight (nLoS) and frequent layout changes, for
+instance, induced by moving forklifts or shifting shelves. We
+introduce Argos, a multimodal wireless digital twin that fuses
+visual and RF information to optimize anchor selection. Visual
+imagery reconstructs the 3D layout, updated continuously via
+existing surveillance cameras, while RF measurements capture
+material-specific attenuation and reflections. We show that layout
+priors alone are insufficient; combining them with the required
+RF optics yields a material-aware channel model that predicts
+range errors under severe nLoS. Argos adapts proactively to
+environmental changes, without the requirement of repeated
+RF calibration or retraining, sustaining sub-meter localization
+accuracy in dynamic scenes. We validate Argos in a 120 m2
+factory testbed spanning over 700 locations, where the digital
+twin is built from 5K RGB images and 0.4M UWB CIR samples.
+To our knowledge, this is the first system to exploit visual priors
+for adaptive orchestration of wireless navigation infrastructure.
       </p>
     </section>
 

@@ -1,130 +1,276 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ARGOS</title>
-    <!-- TailwindCSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts: Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <style>
-        body { font-family: 'Inter', sans-serif; }
-        .section-title {
-            text-align: center;
-            font-weight: 800;
-            font-size: 2rem;
-            margin-bottom: 2.25rem;
-            color: #111827;
-        }
-        @media (min-width: 768px) {
-            .section-title { font-size: 2.25rem; }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ARGOS</title>
+  <!-- TailwindCSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .section-title {
+      text-align: center;
+      font-weight: 800;
+      font-size: 2rem;
+      margin-bottom: 2.25rem;
+      color: #111827;
+    }
+    @media (min-width: 768px) {
+      .section-title { font-size: 2.25rem; }
+    }
+    /* Optional: smooth focus ring for keyboard users */
+    .focus-ring:focus { outline: 2px solid #93c5fd; outline-offset: 2px; }
+    /* Small helper for no-scroll lock without layout shift */
+    .body-lock {
+      position: fixed;
+      overflow-y: scroll;
+      width: 100%;
+    }
+  </style>
 </head>
 <body class="bg-gray-50 text-gray-700">
-    <main class="container mx-auto max-w-5xl px-4 sm:px-6 py-8">
-        <!-- Header -->
-        <header class="text-center mb-10">
-            <h1 class="text-3xl sm:text-5xl font-extrabold text-gray-900 mb-4">ARGOS</h1>
-            <p class="text-xl sm:text-3xl text-gray-700 mb-4">Leveraging Visual Priors for Scalable Wireless Navigation in Dynamic Environments</p>
-            <p class="text-lg sm:text-2xl font-medium italic text-gray-600 mt-2 sm:mt-6">
-                Under review at PerCom 2026
-            </p>
-            <p class="text-base sm:text-xl text-gray-500 mb-4">
-                <a href="#" class="text-blue-600 hover:underline">Anonynmous Authors</a>
-            </p>
-        </header>
-        <!-- Navigation Bar -->
-        <nav class="flex flex-wrap justify-center items-center gap-3 sm:gap-4 mb-8">
-            <a href="#" class="bg-gray-800 text-white px-5 py-2 sm:px-6 sm:py-3 rounded-lg font-semibold text-base sm:text-lg hover:bg-gray-900 transition-transform transform hover:scale-105 shadow-md">
-                <i class="fas fa-file-pdf mr-2"></i> Paper
-            </a>
-            <a href="#" class="bg-gray-800 text-white px-5 py-2 sm:px-6 sm:py-3 rounded-lg font-semibold text-base sm:text-lg hover:bg-gray-900 transition-transform transform hover:scale-105 shadow-md">
-                <i class="fab fa-github mr-2"></i> Code (Coming Soon)
-            </a>
-        </nav>
-        <!-- Schematic Section -->
-        <section class="content-section flex flex-col items-center my-10">
-            <img src="assets/argos_schematic.jpg" alt="ARGOS schematic"
-                 class="w-full max-w-2xl h-auto rounded-xl shadow-lg border-4 border-white drop-shadow mb-2" />
-        </section>
-        <!-- Abstract Section -->
-        <section class="content-section my-10">
-            <h2 class="section-title">Abstract</h2>
-            <p class="text-base sm:text-lg leading-relaxed max-w-4xl mx-auto bg-white p-5 sm:p-8 rounded-xl shadow border">
-                This is a placeholder for your paper's abstract. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-        </section>
-        <!-- Video Demonstration Section -->
-        <section class="content-section my-10">
-            <h2 class="section-title">Video Demonstration</h2>
-            <div class="flex justify-center w-full">
-                <div class="w-full max-w-2xl aspect-video rounded-xl overflow-hidden shadow-lg border-4 border-white">
-                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/H-IGLkJtSzo"
-                            title="ARGOS Demo"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen>
-                    </iframe>
-                </div>
-            </div>
-        </section>
-        <!-- Results Section -->
-        <section class="content-section my-10">
-            <h2 class="section-title">Results</h2>
-            <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
-                <div class="bg-white p-4 sm:p-5 rounded-xl shadow-md border flex flex-col">
-                    <img src="https://placehold.co/600x400/e2e8f0/334155?text=Result+1"
-                         alt="Result 1"
-                         class="w-full rounded-lg mb-4"/>
-                    <p class="text-center font-semibold">Qualitative Result A</p>
-                    <p class="text-center text-sm text-gray-600">A short description of this result.</p>
-                </div>
-                <div class="bg-white p-4 sm:p-5 rounded-xl shadow-md border flex flex-col">
-                    <img src="https://placehold.co/600x400/e2e8f0/334155?text=Result+2"
-                         alt="Result 2"
-                         class="w-full rounded-lg mb-4"/>
-                    <p class="text-center font-semibold">Qualitative Result B</p>
-                    <p class="text-center text-sm text-gray-600">A short description of this result.</p>
-                </div>
-                <div class="bg-white p-4 sm:p-5 rounded-xl shadow-md border flex flex-col">
-                    <img src="https://placehold.co/600x400/e2e8f0/334155?text=Result+3"
-                         alt="Result 3"
-                         class="w-full rounded-lg mb-4"/>
-                    <p class="text-center font-semibold">Quantitative Comparison</p>
-                    <p class="text-center text-sm text-gray-600">A chart or table showing performance.</p>
-                </div>
-                <div class="bg-white p-4 sm:p-5 rounded-xl shadow-md border flex flex-col">
-                    <img src="https://placehold.co/600x400/e2e8f0/334155?text=Result+4"
-                         alt="Result 4"
-                         class="w-full rounded-lg mb-4"/>
-                    <p class="text-center font-semibold">Ablation Study</p>
-                    <p class="text-center text-sm text-gray-600">Analysis of component importance.</p>
-                </div>
-            </div>
-        </section>
-        <!-- Citation Section -->
-        <section class="content-section my-10">
-            <h2 class="section-title">Citation</h2>
-            <div class="max-w-3xl mx-auto bg-gray-100 p-5 rounded-lg shadow-inner border text-xs sm:text-sm">
-                <pre class="whitespace-pre-wrap break-all font-mono"><code>@inproceedings{author2026title,
-    author    = {Anonynmous},
-    title     = {Argos},
-    booktitle = {Percom},
-    year      = {2026},
-}
-                </code></pre>
-            </div>
-        </section>
-        <!-- Footer -->
-        <footer class="mt-12 pt-8 border-t text-center text-gray-500 text-xs sm:text-sm">
-            <p class="mt-2">Website template design inspired by nerfies.github.io and mvsgaussian.github.io.</p>
-        </footer>
-    </main>
+  <main class="container mx-auto max-w-5xl px-4 sm:px-6 py-8">
+    <!-- Header -->
+    <header class="text-center mb-10">
+      <h1 class="text-3xl sm:text-5xl font-extrabold text-gray-900 mb-4">ARGOS</h1>
+      <p class="text-xl sm:text-3xl text-gray-700 mb-4">Leveraging Visual Priors for Scalable Wireless Navigation in Dynamic Environments</p>
+      <p class="text-lg sm:text-2xl font-medium italic text-gray-600 mt-2 sm:mt-6">
+        Under review at PerCom 2026
+      </p>
+      <p class="text-base sm:text-xl text-gray-500 mb-4">
+        <a href="#" class="text-blue-600 hover:underline">Anonynmous Authors</a>
+      </p>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav class="flex flex-wrap justify-center items-center gap-3 sm:gap-4 mb-8">
+      <a href="#"
+         class="bg-gray-800 text-white px-5 py-2 sm:px-6 sm:py-3 rounded-lg font-semibold text-base sm:text-lg hover:bg-gray-900 transition-transform transform hover:scale-105 shadow-md">
+        <i class="fas fa-file-pdf mr-2"></i> Paper
+      </a>
+      <a href="#"
+         class="bg-gray-800 text-white px-5 py-2 sm:px-6 sm:py-3 rounded-lg font-semibold text-base sm:text-lg hover:bg-gray-900 transition-transform transform hover:scale-105 shadow-md">
+        <i class="fab fa-github mr-2"></i> Code (Coming Soon)
+      </a>
+    </nav>
+
+    <!-- Schematic Section -->
+    <section class="content-section flex flex-col items-center my-10">
+      <img
+        src="assets/Argos.jpg"
+        alt="ARGOS Schematic"
+        class="w-full max-w-2xl h-auto rounded-xl shadow-lg border-4 border-white drop-shadow mb-2 cursor-zoom-in focus-ring"
+        id="argosThumb"
+        tabindex="0"
+        role="button"
+        aria-haspopup="dialog"
+        aria-controls="imgModal"
+        aria-label="Open full-size image of ARGOS schematic"
+      />
+    </section>
+
+    <!-- Modal -->
+    <div id="imgModal"
+         class="fixed inset-0 bg-black/90 hidden z-50"
+         role="dialog"
+         aria-modal="true"
+         aria-labelledby="modalTitle"
+         aria-describedby="modalDescription">
+      <!-- Backdrop click area is the container itself; inner box hosts content -->
+      <div class="w-full h-full flex items-center justify-center p-4">
+        <div class="relative max-w-[95vw] max-h-[95vh]">
+          <button aria-label="Close"
+                  id="closeModal"
+                  class="absolute -top-4 -right-4 bg-white/20 hover:bg-white/30 text-white text-2xl leading-none rounded-full w-10 h-10 flex items-center justify-center focus-ring"
+                  title="Close (Esc)">
+            &times;
+          </button>
+          <h2 id="modalTitle" class="sr-only">Image viewer</h2>
+          <img id="modalImg"
+               class="block max-w-[90vw] max-h-[85vh] w-auto h-auto rounded-lg shadow-xl"
+               alt="ARGOS schematic large" />
+          <div id="modalDescription" class="text-center text-gray-300 mt-3"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Summary Section -->
+    <section class="content-section my-10">
+      <h2 class="section-title">Summary</h2>
+      <p class="text-base sm:text-lg leading-relaxed max-w-4xl mx-auto bg-white p-5 sm:p-8 rounded-xl shadow border">
+        This is a placeholder for your paper's abstract. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </section>
+
+    <!-- Video Demonstration Section -->
+    <section class="content-section my-10">
+      <h2 class="section-title">Video Demonstration</h2>
+      <div class="flex justify-center w-full">
+        <div class="w-full max-w-2xl aspect-video rounded-xl overflow-hidden shadow-lg border-4 border-white">
+          <iframe class="w-full h-full" src="https://www.youtube.com/embed/H-IGLkJtSzo"
+                  title="ARGOS Demo"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="content-section my-10">
+      <h2 class="section-title">Results</h2>
+      <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+        <div class="bg-white p-4 sm:p-5 rounded-xl shadow-md border flex flex-col">
+          <img src="assets/PSNR.jpeg"
+               alt="Result 1"
+               class="w-full rounded-lg mb-4"/>
+          <p class="text-center font-semibold">Qualitative Result A</p>
+          <p class="text-center text-sm text-gray-600">A short description of this result.</p>
+        </div>
+        <div class="bg-white p-4 sm:p-5 rounded-xl shadow-md border flex flex-col">
+          <img src="assets/Channel_Prediction.jpeg"
+               alt="Result 2"
+               class="w-full rounded-lg mb-4"/>
+          <p class="text-center font-semibold">Qualitative Result B</p>
+          <p class="text-center text-sm text-gray-600">A short description of this result.</p>
+        </div>
+        <div class="bg-white p-4 sm:p-5 rounded-xl shadow-md border flex flex-col">
+          <img src="assets/Voxel_Update.jpeg"
+               alt="Result 3"
+               class="w-full rounded-lg mb-4"/>
+          <p class="text-center font-semibold">Quantitative Comparison</p>
+          <p class="text-center text-sm text-gray-600">A chart or table showing performance.</p>
+        </div>
+        <div class="bg-white p-4 sm:p-5 rounded-xl shadow-md border flex flex-col">
+          <img src="assets/cdf_optimization.jpg"
+               alt="Result 4"
+               class="w-full rounded-lg mb-4"/>
+          <p class="text-center font-semibold">Ablation Study</p>
+          <p class="text-center text-sm text-gray-600">Analysis of component importance.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Citation Section -->
+    <section class="content-section my-10">
+      <h2 class="section-title">BibTeX</h2>
+      <div class="max-w-3xl mx-auto bg-gray-100 p-5 rounded-lg shadow-inner border text-xs sm:text-sm">
+        <pre class="whitespace-pre-wrap break-all font-mono"><code>BibTex To be Added
+        </code></pre>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="mt-12 pt-8 border-t text-center text-gray-500 text-xs sm:text-sm">
+      <p class="mt-2">Website template design inspired by nerfies.github.io and mvsgaussian.github.io.</p>
+    </footer>
+  </main>
+
+  <!-- Modal Script: open/close + accessibility + focus trap -->
+  <script>
+    (() => {
+      const thumb = document.getElementById('argosThumb');
+      const modal = document.getElementById('imgModal');
+      const modalImg = document.getElementById('modalImg');
+      const closeBtn = document.getElementById('closeModal');
+      const desc = document.getElementById('modalDescription');
+
+      let lastActive = null;
+      let scrollTop = 0;
+
+      function lockBody() {
+        scrollTop = window.scrollY || document.documentElement.scrollTop;
+        document.body.style.top = `-${scrollTop}px`;
+        document.body.classList.add('body-lock');
+      }
+
+      function unlockBody() {
+        document.body.classList.remove('body-lock');
+        document.body.style.top = '';
+        window.scrollTo(0, scrollTop);
+      }
+
+      function openModal(src, alt) {
+        lastActive = document.activeElement;
+        modalImg.src = src;
+        desc.textContent = alt || '';
+        modal.classList.remove('hidden');
+        lockBody();
+        // Move focus to close button for keyboard users
+        closeBtn.focus();
+        // Mark background inert for AT where supported
+        document.querySelector('main')?.setAttribute('aria-hidden', 'true');
+      }
+
+      function closeModal() {
+        modal.classList.add('hidden');
+        modalImg.src = '';
+        unlockBody();
+        document.querySelector('main')?.removeAttribute('aria-hidden');
+        // Restore focus to trigger
+        if (lastActive && typeof lastActive.focus === 'function') {
+          lastActive.focus();
+        } else {
+          thumb.focus();
+        }
+      }
+
+      // Open via click or keyboard Enter/Space
+      function activateFromThumb(e) {
+        if (e.type === 'click' ||
+            (e.type === 'keydown' && (e.key === 'Enter' || e.key === ' '))) {
+          e.preventDefault();
+          openModal(thumb.src, thumb.alt);
+        }
+      }
+
+      thumb.addEventListener('click', activateFromThumb);
+      thumb.addEventListener('keydown', activateFromThumb);
+
+      // Close via button
+      closeBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        closeModal();
+      });
+
+      // Close on backdrop click
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) closeModal();
+      });
+
+      // Close on Escape
+      document.addEventListener('keydown', (e) => {
+        if (!modal.classList.contains('hidden') && e.key === 'Escape') {
+          e.preventDefault();
+          closeModal();
+        }
+      });
+
+      // Simple focus trap within modal (close button is only focusable control here)
+      document.addEventListener('keydown', (e) => {
+        if (modal.classList.contains('hidden')) return;
+        if (e.key !== 'Tab') return;
+        const focusables = [closeBtn];
+        const first = focusables[0];
+        const last = focusables[focusables.length - 1];
+        const active = document.activeElement;
+        if (e.shiftKey && active === first) {
+          e.preventDefault();
+          last.focus();
+        } else if (!e.shiftKey && active === last) {
+          e.preventDefault();
+          first.focus();
+        }
+      });
+    })();
+  </script>
 </body>
 </html>

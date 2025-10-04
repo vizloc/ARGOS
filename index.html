@@ -152,29 +152,40 @@ for adaptive orchestration of wireless navigation infrastructure.
           <img src="assets/PSNR.jpeg"
                alt="Result 1"
                class="w-full rounded-lg mb-4"/>
-          <p class="text-center font-semibold">Qualitative Result A</p>
-          <p class="text-center text-sm text-gray-600">A short description of this result.</p>
+          <p class="text-center text-sm text-gray-600"> Impact of 3D reconstruction fidelity. Top, Left: Median localization
+error decreases with finer voxelization as PSNR improves, but accuracy gains
+saturate beyond 40 cm voxels (≈14 dB). Across all resolutions, Argos outperforms ArgosLO. Top, Right: Segmentation accuracy across methods. Bottom:
+Example reconstructions with 10, 20, 40 and 100 cm voxel resolutions.</p>
         </div>
         <div class="bg-white p-4 sm:p-5 rounded-xl shadow-md border flex flex-col">
           <img src="assets/Channel_Prediction.jpeg"
                alt="Result 2"
                class="w-full rounded-lg mb-4"/>
-          <p class="text-center font-semibold">Qualitative Result B</p>
-          <p class="text-center text-sm text-gray-600">A short description of this result.</p>
+          <p class="text-center text-sm text-gray-600">Top-left: Effect of RSS threshold with 5 anchors. At −74 dBm,
+coverage drops to ≈40% uncovered while median ∆FMD improves to 7 taps,
+giving a practical balance. Top-right: Effect of anchor count at −90 dBm.
+Largest gains occur from 4 to 5 anchors; beyond 5, coverage gains and ∆FMD
+reduction are marginal while ToA-TWR overhead grows. Bottom: ∆FMD
+heatmaps for representative anchor placements.
+</p>
         </div>
         <div class="bg-white p-4 sm:p-5 rounded-xl shadow-md border flex flex-col">
           <img src="assets/Voxel_Update.jpeg"
                alt="Result 3"
                class="w-full rounded-lg mb-4"/>
-          <p class="text-center font-semibold">Quantitative Comparison</p>
-          <p class="text-center text-sm text-gray-600">A chart or table showing performance.</p>
+    
+          <p class="text-center text-sm text-gray-600">: Effect of layout dynamics on recomputation latency. Left: Original
+voxel map. Middle: Changed map with displaced robotic arms (green) – 6%
+voxel change. Right: ∆FMD cache recomputation latency grows with voxel
+churn: ≈2 s for 2% updates and ≈7 s for 10%.</p>
         </div>
         <div class="bg-white p-4 sm:p-5 rounded-xl shadow-md border flex flex-col">
           <img src="assets/cdf_optimization.jpg"
                alt="Result 4"
                class="w-full rounded-lg mb-4"/>
-          <p class="text-center font-semibold">Ablation Study</p>
-          <p class="text-center text-sm text-gray-600">Analysis of component importance.</p>
+   
+          <p class="text-center text-sm text-gray-600"> Under a 5-anchor budget, Argos yields a median localization
+error of 0.6 m, compared to 1.8 m (ArgosLO) and 2.97 m (GDoP).</p>
         </div>
       </div>
     </section>

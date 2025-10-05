@@ -4,15 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ARGOS</title>
-  <!-- TailwindCSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Google Fonts: Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
-  <!-- Font Awesome CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
 
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-X976FRQJJQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-X976FRQJJQ');
+  </script>
   <style>
     body { font-family: 'Inter', sans-serif; }
     .section-title {
@@ -43,7 +48,6 @@
 </head>
 <body class="bg-gray-50 text-gray-700">
   <main class="container mx-auto max-w-5xl px-4 sm:px-6 py-8">
-    <!-- Header -->
     <header class="text-center mb-10">
       <h1 class="text-3xl sm:text-5xl font-extrabold text-gray-900 mb-4">ARGOS</h1>
       <p class="text-xl sm:text-3xl text-gray-700 mb-4">Leveraging Visual Priors for Scalable Wireless Navigation in Dynamic Environments</p>
@@ -52,7 +56,6 @@
       </p>
     </header>
 
-    <!-- Navigation Bar -->
     <nav class="flex flex-wrap justify-center items-center gap-3 sm:gap-4 mb-8">
       <a href="#"
          class="bg-gray-800 text-white px-5 py-2 sm:px-6 sm:py-3 rounded-lg font-semibold text-base sm:text-lg hover:bg-gray-900 transition-transform transform hover:scale-105 shadow-md">
@@ -64,7 +67,6 @@
       </a>
     </nav>
 
-    <!-- Schematic Section -->
     <section class="content-section flex flex-col items-center my-10">
       <img
         src="assets/argos_schematic.jpg"
@@ -79,14 +81,12 @@
       />
     </section>
 
-    <!-- Modal -->
     <div id="imgModal"
          class="fixed inset-0 bg-black/90 hidden z-50"
          role="dialog"
          aria-modal="true"
          aria-labelledby="modalTitle"
          aria-describedby="modalDescription">
-      <!-- Backdrop click area is the container itself; inner box hosts content -->
       <div class="w-full h-full flex items-center justify-center p-4">
         <div class="relative max-w-[95vw] max-h-[95vh]">
           <button aria-label="Close"
@@ -104,7 +104,6 @@
       </div>
     </div>
 
-    <!-- Summary Section -->
     <section class="content-section my-10">
       <h2 class="section-title">Abstract</h2>
       <p class="text-base sm:text-lg leading-relaxed max-w-4xl mx-auto bg-white p-5 sm:p-8 rounded-xl shadow border text-justify justify-text">
@@ -112,7 +111,6 @@
 </p>
     </section>
 
-    <!-- Video Demonstration Section -->
     <section class="content-section my-10">
       <h2 class="section-title">Video Demonstration</h2>
       <div class="flex justify-center w-full">
@@ -127,7 +125,6 @@
       </div>
     </section>
 
-    <!-- Results Section -->
     <section class="content-section my-10">
       <h2 class="section-title">Results</h2>
       <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
@@ -178,7 +175,6 @@
       </div>
     </section>
 
-    <!-- Citation Section -->
     <section class="content-section my-10">
       <h2 class="section-title">BibTeX</h2>
       <div class="max-w-3xl mx-auto bg-gray-100 p-5 rounded-lg shadow-inner border text-xs sm:text-sm">
@@ -187,13 +183,11 @@
       </div>
     </section>
 
-    <!-- Footer -->
     <footer class="mt-12 pt-8 border-t text-center text-gray-500 text-xs sm:text-sm">
       <p class="mt-2">Website template design inspired by nerfies.github.io and mvsgaussian.github.io.</p>
     </footer>
   </main>
 
-  <!-- Modal Script: open/close + accessibility + focus trap -->
   <script>
     (() => {
       const thumb = document.getElementById('argosThumb');
